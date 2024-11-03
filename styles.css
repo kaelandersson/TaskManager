@@ -1,0 +1,131 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  background-image: url("images/ferenc-horvath-skcFiBu91AA-unsplash.jpg"); /* Add your image path here */
+  background-size: cover; /* Keep the image in its original size */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  font-family: Arial, sans-serif; /* Optional: Change the font family */
+  margin: 0; /* Remove default margin */
+  padding-top: 20px; /* Optional: Add padding around the body */
+}
+
+body.dark-mode {
+  background-image: url("images/ferenc-horvath-skcFiBu91AA-unsplash.jpg");
+  background-color: #181818; /* Dark background color */
+  color: white; /* Change text color to white */
+  background-size: cover; /* Keep the image in its original size */
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode button {
+  background-color: #3700b3; /* Button color for dark mode */
+}
+
+.container.dark-mode {
+  background-color: #242424; /* Dark background for task container */
+  color: white; /* Change text color to white */
+}
+span {
+  margin-right: 5px; /* Add margin to the right of the task text */
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px; /* Space between buttons */
+}
+
+input[type="checkbox"] {
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.button-container {
+  display: flex; /* Flexbox for button layout */
+  gap: 10px; /* Space between buttons */
+}
+
+button[type="submit"] {
+  /* This targets the Add Task button */
+  background-color: #242424; /* Green background */
+}
+
+button.edit {
+  /* Class for Edit button */
+  background-color: #242424; /* Yellow background */
+}
+
+button.delete {
+  /* Class for Delete button */
+  background-color: #242424; /* Red background */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space items apart */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Add some padding */
+  border-bottom: 1px solid #ccc; /* Optional: Add a border between tasks */
+}
+
+li button {
+  background-color: #242424;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.task-text {
+  max-width: 400px; /* Adjust as needed */
+  overflow: hidden; /* Hide overflowed content */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-overflow: ellipsis; /* Show ellipsis (...) for truncated text */
+  margin-left: 8px; /* Space between checkbox and text */
+  cursor: default; /* Change cursor to default on hover */
+}
+
+/* Optional: Show full text on hover */
+.task-text:hover {
+  overflow: visible; /* Allow overflow */
+  white-space: normal; /* Allow wrapping */
+  z-index: 1; /* Ensure it shows above other elements */
+}
